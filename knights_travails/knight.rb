@@ -63,6 +63,7 @@ class KnightPathFinder
         break
       end
     end
+
     current_node = results
     path = [current_node.value]
     until current_node.parent.nil?
