@@ -75,15 +75,3 @@ class KnightPathFinder
 
 end
 
-# def build_move_tree(target_pos)
-#   queue = [start_pos]
-#
-#   until queue.empty?
-#     element = queue.shift
-#     return element if element == target_pos
-#     list_positions = new_move_positions(element)
-#     queue.concat(list_positions)
-#
-#   end
-#   nil
-# end
