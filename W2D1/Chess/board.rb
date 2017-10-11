@@ -4,27 +4,31 @@ class Board
 
 attr_accessor :grid
   def initialize
+    row_arr  = []
     @grid = Array.new(8) {Array.new(8)}
     @grid.each_with_index do |row, i|
       row.each_with_index do |col, j|
         if i == 0 || i == 1 ||
          i == 6 || i == 7
-            @grid[i][j] = Piece.new
+             @grid[i][j] = Piece.new([i,j],@grid)
+
+
         else
             @grid[i][j] = NullPiece.new
+
         end
       end
-    end
 
   end
 
-  [0,0]
 
-  def [](pos)
+end
+
+def [](pos)
 
     row,col = pos
     return nil if row > 7 || col > 7
-
+    return nil if row < 0 || col < 0
     @grid[row][col]
   end
 
@@ -54,14 +58,10 @@ attr_accessor :grid
 
   end
 
-
-  # def board
-  #   @board
-  # end
-
 end
 
-#b1 = Board.new
-#p b1.grid
-#b1.move_piece([0,0], [9,9])
-#b1.move_piece([0,0],[0,1])
+
+b = Board.new
+king = King.new([0,5],b)
+
+#p b[0,5]
