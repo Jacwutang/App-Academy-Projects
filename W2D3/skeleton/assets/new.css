@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+  background-color: green;
+}
+
+H1{
+  font-size: 38px;
+  font-family: cursive;
+}
+
+H2{
+  font-size: 32px;
+}
+
+.ingredients-list{
+  color: green;
+  list-style: square inside;
+}
+
+.directions-list{
+  list-style: lower-greek inside;
+}
+
+li{
+  color: purple;
+}
+
+ul > li > a{
+  text-decoration: none;
+  color: inherit;
+}
